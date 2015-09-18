@@ -12,9 +12,18 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
-
+  var userRegisterd = false
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    if let password = SSKeychain.passwordForService(Keys.service, account: Keys.master){
+      userRegisterd = true
+    }
+
+    if !userRegisterd{
+    let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+    let registerView:UINavigationController = storyboard.instantiateViewControllerWithIdentifier("registerView") as! UINavigationController
+    window?.rootViewController = registerView
+    }
     // Override point for customization after application launch.
     return true
   }
