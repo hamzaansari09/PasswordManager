@@ -28,13 +28,13 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
 
 
   @IBAction func watchPasswordTapped() {
-    if !passwordTextField.text.isEmpty{
+    if !passwordTextField.text!.isEmpty{
       passwordTextField.secureTextEntry = !passwordTextField.secureTextEntry
     }
   }
   
   @IBAction func RegisterTapped() {
-    if count(passwordTextField.text)>=4{
+    if passwordTextField.text!.characters.count>=4{
       if SSKeychain.setPassword(passwordTextField.text, forService: Keys.service , account: Keys.master){
         performSegueWithIdentifier("gotoAccounts", sender: nil)
       }

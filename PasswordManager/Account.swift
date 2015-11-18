@@ -23,8 +23,9 @@ func getAllAcounts()->[Account]{
     for data in savedAccount{
     let account = data as! NSDictionary
       let password = SSKeychain.passwordForService(Keys.service, account: account["title"] as! String)
-      let passAccount = Account(title: account["title"], password:password, username: account["username"], account: account["account"], website: account["web"], description: account["desc"])
+      let passAccount = Account(title: account["title"] as! String, password: password, username: account["username"] as? String, account: account["account"]  as? String , website: account["web"]  as? String, description: account["desc"]  as? String)
+        accounts.append(passAccount)
     }
   }
-  return account
+  return accounts
 }

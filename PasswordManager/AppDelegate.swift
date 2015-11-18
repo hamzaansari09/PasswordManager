@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var userRegisterd = false
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-    if let password = SSKeychain.passwordForService(Keys.service, account: Keys.master){
+    if let _ = SSKeychain.passwordForService(Keys.service, account: Keys.master){
       userRegisterd = true
     }
 

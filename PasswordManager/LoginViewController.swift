@@ -35,7 +35,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
   }
   
   @IBAction func watchPasswordTapped() {
-    if !passwordTextField.text.isEmpty{
+    if !passwordTextField.text!.isEmpty{
       passwordTextField.secureTextEntry = !passwordTextField.secureTextEntry
     }
   }
