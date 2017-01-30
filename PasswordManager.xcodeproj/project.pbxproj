@@ -7,7 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08F288D3272B512D0FE924F0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A99950A59A773D96E95997B /* libPods.a */; };
+		56754889D4C5CC4B5A6385BA /* Pods_PasswordManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A47692CE9C14AB740614A45A /* Pods_PasswordManagerTests.framework */; };
+		6A15D4401E389004007E9B97 /* ColorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A15D43F1E389004007E9B97 /* ColorsTableViewController.swift */; };
+		6A15D4441E3894DF007E9B97 /* SQLiteDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A15D4411E3894DF007E9B97 /* SQLiteDB.swift */; };
+		6A15D4451E3894DF007E9B97 /* SQLTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A15D4421E3894DF007E9B97 /* SQLTable.swift */; };
+		6A15D4461E3894DF007E9B97 /* String-Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A15D4431E3894DF007E9B97 /* String-Extras.swift */; };
+		6A15D44C1E3895B7007E9B97 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A15D44B1E3895B7007E9B97 /* libsqlite3.tbd */; };
+		6A46104F1E38BC9200AE7CA6 /* password.db in Resources */ = {isa = PBXBuildFile; fileRef = 6A46104E1E38BC9200AE7CA6 /* password.db */; };
+		6A4610511E38CD7800AE7CA6 /* TouchLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4610501E38CD7800AE7CA6 /* TouchLoginViewController.swift */; };
+		6A4610531E38D30100AE7CA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A4610521E38D30100AE7CA6 /* LaunchScreen.storyboard */; };
 		6A4F436F1B78A6DA00DDD034 /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4F436E1B78A6DA00DDD034 /* AccountsViewController.swift */; };
 		6A4F43711B78A6E900DDD034 /* AddAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4F43701B78A6E900DDD034 /* AddAccountViewController.swift */; };
 		6A4F43731B78A70600DDD034 /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4F43721B78A70600DDD034 /* AccountTableViewCell.swift */; };
@@ -16,13 +24,13 @@
 		6ABD3D4C1B76112E00F6E42E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD3D4B1B76112E00F6E42E /* LoginViewController.swift */; };
 		6ABD3D4F1B76112E00F6E42E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ABD3D4D1B76112E00F6E42E /* Main.storyboard */; };
 		6ABD3D511B76112E00F6E42E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6ABD3D501B76112E00F6E42E /* Images.xcassets */; };
-		6ABD3D541B76112E00F6E42E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ABD3D521B76112E00F6E42E /* LaunchScreen.xib */; };
 		6ABD3D601B76112F00F6E42E /* PasswordManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD3D5F1B76112F00F6E42E /* PasswordManagerTests.swift */; };
 		6ABD3D6B1B76169000F6E42E /* AppContants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD3D6A1B76169000F6E42E /* AppContants.swift */; };
 		6ABD3D6D1B7616D500F6E42E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD3D6C1B7616D500F6E42E /* UIColorExtension.swift */; };
 		6ABD3D6F1B761D4C00F6E42E /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD3D6E1B761D4C00F6E42E /* AppExtensions.swift */; };
 		6ABD3D711B761E0100F6E42E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD3D701B761E0100F6E42E /* RegisterViewController.swift */; };
 		6ABD3D771B762FB700F6E42E /* SwiftNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD3D761B762FB700F6E42E /* SwiftNotice.swift */; };
+		B5135C87DC0F935727E1BAED /* Pods_PasswordManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 142B39358AFD28D404240DE3 /* Pods_PasswordManager.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,20 +44,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		529323A3E5C7F70FCD498791 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		55F3011819E5F678E109080D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		142B39358AFD28D404240DE3 /* Pods_PasswordManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PasswordManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45E3085EF88101C91FB0DF97 /* Pods-PasswordManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasswordManagerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PasswordManagerTests/Pods-PasswordManagerTests.release.xcconfig"; sourceTree = "<group>"; };
+		6A15D43F1E389004007E9B97 /* ColorsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsTableViewController.swift; sourceTree = "<group>"; };
+		6A15D4411E3894DF007E9B97 /* SQLiteDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteDB.swift; sourceTree = "<group>"; };
+		6A15D4421E3894DF007E9B97 /* SQLTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLTable.swift; sourceTree = "<group>"; };
+		6A15D4431E3894DF007E9B97 /* String-Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String-Extras.swift"; sourceTree = "<group>"; };
+		6A15D44A1E389584007E9B97 /* Password-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Password-Bridging-Header.h"; sourceTree = "<group>"; };
+		6A15D44B1E3895B7007E9B97 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		6A46104E1E38BC9200AE7CA6 /* password.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = password.db; sourceTree = "<group>"; };
+		6A4610501E38CD7800AE7CA6 /* TouchLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchLoginViewController.swift; sourceTree = "<group>"; };
+		6A4610521E38D30100AE7CA6 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A4F436E1B78A6DA00DDD034 /* AccountsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountsViewController.swift; path = ViewControllers/AccountsViewController.swift; sourceTree = "<group>"; };
 		6A4F43701B78A6E900DDD034 /* AddAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddAccountViewController.swift; path = ViewControllers/AddAccountViewController.swift; sourceTree = "<group>"; };
 		6A4F43721B78A70600DDD034 /* AccountTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountTableViewCell.swift; path = Views/AccountTableViewCell.swift; sourceTree = "<group>"; };
 		6A4F43741B78A83300DDD034 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
-		6A99950A59A773D96E95997B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ABD3D441B76112E00F6E42E /* PasswordManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasswordManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ABD3D481B76112E00F6E42E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6ABD3D491B76112E00F6E42E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6ABD3D4B1B76112E00F6E42E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6ABD3D4E1B76112E00F6E42E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6ABD3D501B76112E00F6E42E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6ABD3D531B76112E00F6E42E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		6ABD3D591B76112F00F6E42E /* PasswordManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasswordManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ABD3D5E1B76112F00F6E42E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6ABD3D5F1B76112F00F6E42E /* PasswordManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordManagerTests.swift; sourceTree = "<group>"; };
@@ -57,8 +72,11 @@
 		6ABD3D6C1B7616D500F6E42E /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		6ABD3D6E1B761D4C00F6E42E /* AppExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
 		6ABD3D701B761E0100F6E42E /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = ViewControllers/RegisterViewController.swift; sourceTree = "<group>"; };
-		6ABD3D721B762E3300F6E42E /* PasswordManager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PasswordManager-Bridging-Header.h"; sourceTree = "<group>"; };
 		6ABD3D761B762FB700F6E42E /* SwiftNotice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftNotice.swift; sourceTree = "<group>"; };
+		6B980EE23128C73B04A4C5F7 /* Pods-PasswordManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasswordManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-PasswordManager/Pods-PasswordManager.release.xcconfig"; sourceTree = "<group>"; };
+		A47692CE9C14AB740614A45A /* Pods_PasswordManagerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PasswordManagerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBA84455ACB2B480F4BCCADB /* Pods-PasswordManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasswordManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PasswordManager/Pods-PasswordManager.debug.xcconfig"; sourceTree = "<group>"; };
+		E5FFC62E83E497CDA6682647 /* Pods-PasswordManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasswordManagerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PasswordManagerTests/Pods-PasswordManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08F288D3272B512D0FE924F0 /* libPods.a in Frameworks */,
+				6A15D44C1E3895B7007E9B97 /* libsqlite3.tbd in Frameworks */,
+				B5135C87DC0F935727E1BAED /* Pods_PasswordManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56754889D4C5CC4B5A6385BA /* Pods_PasswordManagerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +103,9 @@
 		170A54AB9CE197DFC020C48D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6A99950A59A773D96E95997B /* libPods.a */,
+				6A15D44B1E3895B7007E9B97 /* libsqlite3.tbd */,
+				142B39358AFD28D404240DE3 /* Pods_PasswordManager.framework */,
+				A47692CE9C14AB740614A45A /* Pods_PasswordManagerTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -91,10 +113,44 @@
 		2DC8B612502EE2511DEC66C6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				55F3011819E5F678E109080D /* Pods.debug.xcconfig */,
-				529323A3E5C7F70FCD498791 /* Pods.release.xcconfig */,
+				BBA84455ACB2B480F4BCCADB /* Pods-PasswordManager.debug.xcconfig */,
+				6B980EE23128C73B04A4C5F7 /* Pods-PasswordManager.release.xcconfig */,
+				E5FFC62E83E497CDA6682647 /* Pods-PasswordManagerTests.debug.xcconfig */,
+				45E3085EF88101C91FB0DF97 /* Pods-PasswordManagerTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		6A15D4471E3894E9007E9B97 /* Kits */ = {
+			isa = PBXGroup;
+			children = (
+				6A46104E1E38BC9200AE7CA6 /* password.db */,
+				6A15D4411E3894DF007E9B97 /* SQLiteDB.swift */,
+				6A15D4421E3894DF007E9B97 /* SQLTable.swift */,
+				6A15D4431E3894DF007E9B97 /* String-Extras.swift */,
+			);
+			name = Kits;
+			sourceTree = "<group>";
+		};
+		6A15D4481E3894F4007E9B97 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6A4F43741B78A83300DDD034 /* Account.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		6A4610541E38D8BB00AE7CA6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6ABD3D701B761E0100F6E42E /* RegisterViewController.swift */,
+				6ABD3D4B1B76112E00F6E42E /* LoginViewController.swift */,
+				6A4610501E38CD7800AE7CA6 /* TouchLoginViewController.swift */,
+				6A4F436E1B78A6DA00DDD034 /* AccountsViewController.swift */,
+				6A4F43701B78A6E900DDD034 /* AddAccountViewController.swift */,
+				6A15D43F1E389004007E9B97 /* ColorsTableViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		6ABD3D3B1B76112E00F6E42E = {
@@ -121,18 +177,14 @@
 			isa = PBXGroup;
 			children = (
 				6ABD3D491B76112E00F6E42E /* AppDelegate.swift */,
-				6ABD3D701B761E0100F6E42E /* RegisterViewController.swift */,
-				6ABD3D4B1B76112E00F6E42E /* LoginViewController.swift */,
-				6A4F436E1B78A6DA00DDD034 /* AccountsViewController.swift */,
-				6A4F43701B78A6E900DDD034 /* AddAccountViewController.swift */,
 				6A4F43721B78A70600DDD034 /* AccountTableViewCell.swift */,
-				6A4F43741B78A83300DDD034 /* Account.swift */,
-				6ABD3D691B76167700F6E42E /* Utils */,
 				6ABD3D4D1B76112E00F6E42E /* Main.storyboard */,
 				6ABD3D501B76112E00F6E42E /* Images.xcassets */,
-				6ABD3D521B76112E00F6E42E /* LaunchScreen.xib */,
+				6A4610541E38D8BB00AE7CA6 /* Controllers */,
+				6A15D4481E3894F4007E9B97 /* Models */,
+				6A15D4471E3894E9007E9B97 /* Kits */,
+				6ABD3D691B76167700F6E42E /* Utils */,
 				6ABD3D471B76112E00F6E42E /* Supporting Files */,
-				6ABD3D721B762E3300F6E42E /* PasswordManager-Bridging-Header.h */,
 			);
 			path = PasswordManager;
 			sourceTree = "<group>";
@@ -141,6 +193,8 @@
 			isa = PBXGroup;
 			children = (
 				6ABD3D481B76112E00F6E42E /* Info.plist */,
+				6A15D44A1E389584007E9B97 /* Password-Bridging-Header.h */,
+				6A4610521E38D30100AE7CA6 /* LaunchScreen.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -180,11 +234,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6ABD3D631B76112F00F6E42E /* Build configuration list for PBXNativeTarget "PasswordManager" */;
 			buildPhases = (
-				C6A5C48B065D31D1D4B44582 /* Check Pods Manifest.lock */,
+				C6A5C48B065D31D1D4B44582 /* [CP] Check Pods Manifest.lock */,
 				6ABD3D401B76112E00F6E42E /* Sources */,
 				6ABD3D411B76112E00F6E42E /* Frameworks */,
 				6ABD3D421B76112E00F6E42E /* Resources */,
-				92E3E3011D26C61D8A58C53C /* Copy Pods Resources */,
+				92E3E3011D26C61D8A58C53C /* [CP] Copy Pods Resources */,
+				4C4911FFE5303AE67157D73E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -199,9 +254,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6ABD3D661B76112F00F6E42E /* Build configuration list for PBXNativeTarget "PasswordManagerTests" */;
 			buildPhases = (
+				9BC5EE272C9E03815363E045 /* [CP] Check Pods Manifest.lock */,
 				6ABD3D551B76112F00F6E42E /* Sources */,
 				6ABD3D561B76112F00F6E42E /* Frameworks */,
 				6ABD3D571B76112F00F6E42E /* Resources */,
+				1F03B3ECE4EE5289C4B85FFC /* [CP] Embed Pods Frameworks */,
+				092194AC1AD0766FBCD8C16A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -221,14 +279,17 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = HamzaAnsari;
 				TargetAttributes = {
 					6ABD3D431B76112E00F6E42E = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = QFMJNHRX38;
+						LastSwiftMigration = 0820;
 					};
 					6ABD3D581B76112F00F6E42E = {
 						CreatedOnToolsVersion = 6.4;
+						LastSwiftMigration = 0820;
 						TestTargetID = 6ABD3D431B76112E00F6E42E;
 					};
 				};
@@ -258,7 +319,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6ABD3D4F1B76112E00F6E42E /* Main.storyboard in Resources */,
-				6ABD3D541B76112E00F6E42E /* LaunchScreen.xib in Resources */,
+				6A4610531E38D30100AE7CA6 /* LaunchScreen.storyboard in Resources */,
+				6A46104F1E38BC9200AE7CA6 /* password.db in Resources */,
 				6ABD3D511B76112E00F6E42E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,34 +335,94 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		92E3E3011D26C61D8A58C53C /* Copy Pods Resources */ = {
+		092194AC1AD0766FBCD8C16A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PasswordManagerTests/Pods-PasswordManagerTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C6A5C48B065D31D1D4B44582 /* Check Pods Manifest.lock */ = {
+		1F03B3ECE4EE5289C4B85FFC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PasswordManagerTests/Pods-PasswordManagerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4C4911FFE5303AE67157D73E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PasswordManager/Pods-PasswordManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92E3E3011D26C61D8A58C53C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PasswordManager/Pods-PasswordManager-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BC5EE272C9E03815363E045 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C6A5C48B065D31D1D4B44582 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -311,16 +433,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				6ABD3D6F1B761D4C00F6E42E /* AppExtensions.swift in Sources */,
+				6A15D4451E3894DF007E9B97 /* SQLTable.swift in Sources */,
 				6A4F43751B78A83300DDD034 /* Account.swift in Sources */,
+				6A15D4441E3894DF007E9B97 /* SQLiteDB.swift in Sources */,
+				6A4610511E38CD7800AE7CA6 /* TouchLoginViewController.swift in Sources */,
 				6A4F43711B78A6E900DDD034 /* AddAccountViewController.swift in Sources */,
 				6ABD3D6B1B76169000F6E42E /* AppContants.swift in Sources */,
 				6A4F43731B78A70600DDD034 /* AccountTableViewCell.swift in Sources */,
 				6ABD3D4C1B76112E00F6E42E /* LoginViewController.swift in Sources */,
 				6ABD3D711B761E0100F6E42E /* RegisterViewController.swift in Sources */,
 				6ABD3D4A1B76112E00F6E42E /* AppDelegate.swift in Sources */,
+				6A15D4461E3894DF007E9B97 /* String-Extras.swift in Sources */,
 				6ABD3D771B762FB700F6E42E /* SwiftNotice.swift in Sources */,
 				6A4F436F1B78A6DA00DDD034 /* AccountsViewController.swift in Sources */,
 				6ABD3D6D1B7616D500F6E42E /* UIColorExtension.swift in Sources */,
+				6A15D4401E389004007E9B97 /* ColorsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,14 +478,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		6ABD3D521B76112E00F6E42E /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6ABD3D531B76112E00F6E42E /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -375,14 +494,17 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -419,8 +541,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -439,39 +563,49 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		6ABD3D641B76112F00F6E42E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 55F3011819E5F678E109080D /* Pods.debug.xcconfig */;
+			baseConfigurationReference = BBA84455ACB2B480F4BCCADB /* Pods-PasswordManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = QFMJNHRX38;
 				INFOPLIST_FILE = PasswordManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ansari.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "PasswordManager/PasswordManager-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Password-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		6ABD3D651B76112F00F6E42E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 529323A3E5C7F70FCD498791 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 6B980EE23128C73B04A4C5F7 /* Pods-PasswordManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = QFMJNHRX38;
 				INFOPLIST_FILE = PasswordManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ansari.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "PasswordManager/PasswordManager-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Password-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		6ABD3D671B76112F00F6E42E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5FFC62E83E497CDA6682647 /* Pods-PasswordManagerTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -484,13 +618,16 @@
 				);
 				INFOPLIST_FILE = PasswordManagerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ansari.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PasswordManager.app/PasswordManager";
 			};
 			name = Debug;
 		};
 		6ABD3D681B76112F00F6E42E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45E3085EF88101C91FB0DF97 /* Pods-PasswordManagerTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -499,7 +636,9 @@
 				);
 				INFOPLIST_FILE = PasswordManagerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ansari.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PasswordManager.app/PasswordManager";
 			};
 			name = Release;

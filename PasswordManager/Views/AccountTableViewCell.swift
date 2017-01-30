@@ -11,17 +11,28 @@ import UIKit
 class AccountTableViewCell: UITableViewCell {
 
   @IBOutlet weak var titleLabel: UILabel!
-  @IBOutlet weak var descLabel: UILabel!
+  @IBOutlet weak var passwordField: UITextField!
   @IBOutlet weak var accontLabel: UILabel!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var showHideButton: UIButton!
+
+    func update(account: Account){
+        accontLabel.text = account.title + " (\(account.username))"
+        passwordField.text = account.decryptedPassword()
+        
+        if let firstChar = account.title.characters.first {
+            titleLabel.text = "\(firstChar)"
+        }else if let firstChar = account.username.characters.first{
+            titleLabel.text = "\(firstChar)"
+        }
     }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func show(_ isShow: Bool=true){
+        if isShow{
+            passwordField.isSecureTextEntry = false
+            showHideButton.setTitle("Hide", for: .normal)
+        }else{
+            passwordField.isSecureTextEntry = true
+            showHideButton.setTitle("Show", for: .normal)
+        }
     }
-
 }

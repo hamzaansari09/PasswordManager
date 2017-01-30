@@ -8,28 +8,49 @@
 
 import UIKit
 
-class AddAccountViewController: UIViewController {
+class AddAccountViewController: UITableViewController {
+    
+    @IBOutlet weak var accountTextField: UITextField!
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+   // @IBOutlet weak var webTextField: UITextField!
+    @IBOutlet weak var colorButton: UIButton!
 
+    var account: Account?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        if let account = account{
+            accountTextField.text = account.title
+            usernameTextField.text = account.username
+            passwordTextField.text = account.decryptedPassword()
+        }else{
+            account = Account()
+        }
+        
+        accountTextField.becomeFirstResponder()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func doneTapped(_ sender: UIBarButtonItem){
+        let title = accountTextField.text!
+        let password = passwordTextField.text!
+        let username = usernameTextField.text!
+        //let website = webTextField.text!
+        
+        guard !title.isEmpty && !password.isEmpty else {
+            SwiftNotice.showNoticeWithText(.error, text: "Require Title \nand Password", autoClear: true)
+            return
+        }
+        
+        account!.updateAccount(title: title, password: password, username: username, website: "")
+        self.performSegue(withIdentifier: "exitToAccounts", sender: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func unwindToAddAccount(_ segue: UIStoryboardSegue){
+        if segue.identifier == "exitToAddAccount"{
+            let destinationVC = segue.source as! ColorsTableViewController
+            colorButton.backgroundColor = Colors.brandColors[destinationVC.selectedColorRow]
+        }
     }
-    */
-
 }

@@ -19,15 +19,4 @@ extension UIView {
       layer.masksToBounds = newValue > 0
     }
   }
-  
-  func setRoundedCorners(corners:UIRectCorner, radius:CGFloat) {
-    let rect = self.bounds;
-    
-    // Create the path
-    let maskPath = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-    
-    // Create the shape layer and set its path
-    let maskLayer = CAShapeLayer(layer: layer)
-    maskLayer.frame = rect
-  }
 }

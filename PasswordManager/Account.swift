@@ -7,25 +7,40 @@
 //
 
 import Foundation
+import CryptoSwift
 
-struct Account {
-  let title:String!
-  let password:String!
-  let username:String?
-  let account:String?
-  let website:String?
-  let description:String?
-}
+fileprivate let secret = "6241540314417463"
+fileprivate let iv = "8459203144123486"
 
-func getAllAcounts()->[Account]{
-  var accounts:[Account] = []
-  if let savedAccount = NSUserDefaults.standardUserDefaults().arrayForKey("accounts"){
-    for data in savedAccount{
-    let account = data as! NSDictionary
-      let password = SSKeychain.passwordForService(Keys.service, account: account["title"] as! String)
-      let passAccount = Account(title: account["title"] as! String, password: password, username: account["username"] as? String, account: account["account"]  as? String , website: account["web"]  as? String, description: account["desc"]  as? String)
-        accounts.append(passAccount)
+class Account: SQLTable {
+    
+    var id = -1
+    var title:String = ""
+    var password:String = ""
+    var username:String = ""
+    var website:String = ""
+    
+    func updateAccount(title: String, password: String, username: String, website: String){
+        self.title = title
+        self.username = username
+        self.website = website
+        self.password = encrypt(password: password)
+        save()
     }
-  }
-  return accounts
+    
+    
+    func encrypt(password: String)->String{
+        do {
+            let encryptedPass = try password.utf8.map{$0}.encrypt(cipher: AES(key: secret, iv: iv))
+            return encryptedPass.toBase64() ?? ""
+        } catch {
+            print("Encrytion failed")
+            return ""
+        }
+    }
+    
+    func decryptedPassword()->String?{
+        let decrypted = try? password.decryptBase64ToString(cipher: AES(key: secret, iv: iv))
+        return decrypted
+    }
 }
