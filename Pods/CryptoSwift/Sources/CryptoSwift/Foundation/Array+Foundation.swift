@@ -13,8 +13,21 @@
 //  - This notice may not be removed or altered from any source or binary distribution.
 //
 
-/// Message authentication code.
-public protocol Authenticator {
-    /// Calculate Message Authentication Code (MAC) for message.
-    func authenticate(_ bytes: Array<UInt8>) throws -> Array<UInt8>
+import Foundation
+
+public extension Array where Element == UInt8 {
+
+    public func toBase64() -> String? {
+        return Data(bytes: self).base64EncodedString()
+    }
+
+    public init(base64: String) {
+        self.init()
+
+        guard let decodedData = Data(base64Encoded: base64) else {
+            return
+        }
+
+        append(contentsOf: decodedData.bytes)
+    }
 }

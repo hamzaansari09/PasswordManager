@@ -13,8 +13,10 @@
 //  - This notice may not be removed or altered from any source or binary distribution.
 //
 
-/// Message authentication code.
-public protocol Authenticator {
-    /// Calculate Message Authentication Code (MAC) for message.
-    func authenticate(_ bytes: Array<UInt8>) throws -> Array<UInt8>
+//  PKCS is a group of public-key cryptography standards devised
+//  and published by RSA Security Inc, starting in the early 1990s.
+//
+
+public enum PKCS5 {
+    typealias Padding = PKCS7Padding
 }
